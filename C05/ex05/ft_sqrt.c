@@ -6,7 +6,7 @@
 /*   By: cfiachet <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 10:10:34 by cfiachet          #+#    #+#             */
-/*   Updated: 2024/09/11 10:10:35 by cfiachet         ###   ########.fr       */
+/*   Updated: 2024/09/16 13:47:21 by cfiachet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,10 @@ int	ft_sqrt(int nb)
 			return (0);
 	}
 	return (0);
+}
+
+#include <stdio.h>
+int	main()
+{
+	printf("%d", ft_sqrt(25));
 }
