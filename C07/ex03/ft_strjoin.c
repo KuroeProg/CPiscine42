@@ -6,7 +6,7 @@
 /*   By: cfiachet <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/13 09:15:04 by cfiachet          #+#    #+#             */
-/*   Updated: 2024/09/15 15:51:27 by cfiachet         ###   ########.fr       */
+/*   Updated: 2024/09/19 12:12:23 by cfiachet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,9 +86,9 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 #include <stdio.h>
 int	main()
 {
-	int size = 0;
-	char *strs[] = {"Hello","World", "ceci", "est", "un", "pre", "test"};
-	char *sep = "UWU";
+	int size = 1;
+	char *strs[] = {""};
+	char *sep = "";
 	char *s = ft_strjoin(size, strs, sep);
 	printf("%s", s);
 	free(s);

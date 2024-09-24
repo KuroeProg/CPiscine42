@@ -6,7 +6,7 @@
 /*   By: cfiachet <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 11:54:36 by cfiachet          #+#    #+#             */
-/*   Updated: 2024/09/18 11:54:37 by cfiachet         ###   ########.fr       */
+/*   Updated: 2024/09/24 14:24:37 by cfiachet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 void	ft_putstr(char *str)
 {
 	int	i;
-	
+
 	i = 0;
-	while(str[i])
+	while (str[i])
 	{
 		write(1, &str[i], 1);
 		i++;

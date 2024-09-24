@@ -1,25 +1,30 @@
-NAME = libft.a
+OUT = libft.a
+
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -std=c99 -I.
 
-SRC = ft_putchar.c ft_swap.c ft_putstr.c ft_strlen.c ft_strcmp.c
+CFLAGS = -Wall -Wextra -Werror
 
+SRCS := ./srcs/ft_putchar.c ./srcs/ft_swap.c ./srcs/ft_putstr.c ./srcs/ft_strlen.c ./srcs/ft_strcmp.c
 
-OBJ = ${SRC:.c=.o}
+OBJ := $(SRCS:.c=.o)
 
-all: $(NAME)
+INC_DIR = includes
 
-$(NAME): $(OBJ)
-	ar rcs $(NAME) $(OBJ)
-	ranlib $(NAME)
+all: $(OUT)
+
+$(OUT): $(OBJ)
+	ar rcs $(OUT) $(OBJ)
+	ranlib $(OUT)
 
 %.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -I $(INC_DIR) -c $< -o $@
 
 clean:
 	rm -f $(OBJ) 
 
 fclean: clean
-	rm -f $(NAME)
+	rm -f $(OUT)
 
 re: fclean all
+
+.PHONY: all clean fclean re
