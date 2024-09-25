@@ -70,12 +70,15 @@ char	**ft_split(char *str)
 	{
 		while (is_present(str[i]) == 1)
 			i++;
-		strlen = ft_strlen(str + i);
-		tab[y] = ft_malloc(str + i, strlen);
-		if (tab[y] == NULL)
-			return (tab);
-		i = i + strlen;
-		y++;
+		if (str[i])
+		{
+			strlen = ft_strlen(str + i);
+			tab[y] = ft_malloc(str + i, strlen);
+			if (tab[y] == NULL)
+				return (tab);
+			i = i + strlen;
+			y++;
+		}
 	}
 	tab[y] = 0;
 	return (tab);
@@ -85,9 +88,9 @@ int main(void)
 {
 
         int     i = 0;
-        char str[] = "							";
+        char str[] = " Ceci est un test     ";
         char **res = ft_split(str);
-        while (res && res[i])
+        while (i <= ft_countword(str))
         {
                 printf("%d : %s\n", i,res[i]);
                 i++;
