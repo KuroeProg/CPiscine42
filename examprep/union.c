@@ -43,7 +43,7 @@ int	main(int argc, char **argv)
 	{
 		if (argv[2][y] && is_present(argv[1], argv[2], argv[2][y], i, y) == 0)
 		{
-			write(1, &argv[2][y], 1);df6vewg4thras
+			write(1, &argv[2][y], 1);
 		}
 		y++;
 	}
